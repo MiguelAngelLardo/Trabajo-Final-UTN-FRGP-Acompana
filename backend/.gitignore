@@ -1,0 +1,7 @@
+node_modules/
+.env
+uploads/apuntes/*
+uploads/perfiles/*
+!uploads/apuntes/.gitkeep
+!uploads/perfiles/.gitkeep
+uploads/

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-azuloscuro: #022C53;
+  --color-azulutn: #065EB9;
+  --color-turquesa: #1AB9C6;
+  --color-gris: #688195;
+  --color-celeste: #CBE8F4;
+  --color-fondo: #E6F3F9;
+  --color-acento: #C2410C;
+  --font-sans: "Segoe UI", system-ui, sans-serif;
+  --font-dislexia: "OpenDyslexic", "Segoe UI", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-fondo text-azuloscuro font-sans;
+  }
+}
+
+.modo-daltonico {
+  --color-azuloscuro: #1A1A1A;
+  --color-azulutn: #5B2C8F;
+  --color-turquesa: #E69F00;
+  --color-gris: #595959;
+  --color-celeste: #ECE3F5;
+  --color-fondo: #F5F5F5;
+  --color-acento: #D55E00;
+
+  --color-green-100: #D3EFE6;
+  --color-green-600: #009E73;
+  --color-green-700: #007A59;
+  --color-green-800: #005C43;
+
+  --color-red-50: #FCEFE6;
+  --color-red-100: #F8DDCC;
+  --color-red-200: #F0BB99;
+  --color-red-500: #DD6A1F;
+  --color-red-600: #D55E00;
+  --color-red-700: #A84A00;
+  --color-red-800: #7F3800;
+
+  --color-amber-50: #FCF9DC;
+  --color-amber-300: #F0E442;
+  --color-amber-600: #A89A00;
+  --color-amber-900: #4D4600;
+}
+
+.fuente-dislexia {
+  --font-sans: "OpenDyslexic", "Segoe UI", system-ui, sans-serif;
+  word-spacing: 0.05em;
+}
+
+.modo-daltonico a:not([class*="bg-"]):hover,
+.modo-daltonico a.text-turquesa {
+  text-decoration: underline;
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid var(--color-azulutn);
+  outline-offset: 2px;
+}
+
+header :where(a, button, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline-color: var(--color-turquesa);
+}
